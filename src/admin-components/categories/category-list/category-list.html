@@ -1,11 +1,30 @@
 <h3>Kategoriler</h3>
 
 
-<table>
+<table class="table table-hover">
+<thead>
+<tr>
+  <th>#</th>
+  <th>Kategori Adı</th>
+  <th>İşlemler</th>
+</tr>
+</thead>
+<tbody>
+
+@for (item of categories(); track $index) {
+<tr>
+  <td>{{$index + 1}}</td>
+  <td>{{item.name}}</td>
+  <td>
+    <a class="btn btn-outline-danger">Sil</a>
+    <a class="btn btn-outline-info m-2">Güncelle</a>
+  </td>
+</tr>
+
+}
+</tbody>
 
 </table>
-
-
 
 
 <a routerLink="create" class="btn btn-outline-primary">Yeni Kategori Oluştur</a>

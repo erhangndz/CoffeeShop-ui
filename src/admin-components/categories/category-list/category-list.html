@@ -16,8 +16,8 @@
   <td>{{$index + 1}}</td>
   <td>{{item.name}}</td>
   <td>
-    <a class="btn btn-outline-danger">Sil</a>
-    <a class="btn btn-outline-info m-2">Güncelle</a>
+    <a class="btn btn-outline-danger" (click)="delete(item.id)">Sil</a>
+    <a class="btn btn-outline-info m-2" routerLink="update/{{item.id}}">Güncelle</a>
   </td>
 </tr>
 

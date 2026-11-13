@@ -15,9 +15,20 @@ getAll(){
  return this.http.get<Category[]>(this.baseUrl)
 }
 
+create(model:Category){
+  return this.http.post(this.baseUrl,model)
+}
 
+getById(id:number){
+  return this.http.get<Category>(this.baseUrl + id)
+}
 
+update(model:Category){
+  return this.http.put(this.baseUrl,model)
+}
 
-
+delete(id:number){
+  return this.http.delete(this.baseUrl+id)
+}
 
 }

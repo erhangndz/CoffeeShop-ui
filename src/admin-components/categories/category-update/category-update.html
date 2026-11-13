@@ -1,1 +1,12 @@
-<p>category-update works!</p>
+<h3>Kategori Güncelle</h3>
+
+<form (submit)="update()">
+  <input type="hidden" name="id" [(ngModel)]="category.id">
+  <label>Kategori Adı</label>
+  <input type="text" name="name" [(ngModel)]="category.name" class="form-control" required>
+  <br>
+  <button type="submit" class="btn btn-outline-dark">Güncelle</button>
+  <a routerLink="/admin/categories" class="btn btn-secondary offset-2">İptal</a>
+</form>
+
+

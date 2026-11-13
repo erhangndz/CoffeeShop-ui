@@ -1,7 +1,6 @@
 import { CategoryService } from './../../../services/category-service';
-import { Component, inject } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import { Category } from '../../../models/category';
+import {  Component, inject } from '@angular/core';
+import {  RouterLink } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 
 @Component({
@@ -31,7 +30,15 @@ private categoryService = inject(CategoryService);
 categories = toSignal(this.categoryService.getAll())
 
 
-
+delete(id){
+  this.categoryService.delete(id).subscribe({
+    next: () => {
+      alert('Kategori Başarıyla Silindi');
+      window.location.reload();
+    },
+    error: (err)=> console.log(err)
+  })
+}
 
 
 

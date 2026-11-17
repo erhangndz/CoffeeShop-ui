@@ -1,0 +1,13 @@
+<h3>Giriş Formu</h3>
+
+<form (submit)="login()">
+  <label>Kullanıcı Adı veya Email</label>
+  <input type="text" name="userNameOrEmail" class="form-control mb-3" [(ngModel)]="userLogin.userNameOrEmail" required="">
+  <label>Şifre</label>
+  <input type="password" name="password" class="form-control mb-3" [(ngModel)]="userLogin.password" required="">
+
+  @if(errorMessage){
+ <span class="text-danger mb-3" >{{errorMessage}}</span>
+  }
+  <button class="btn btn-outline-dark">Giriş Yap</button>
+</form>

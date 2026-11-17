@@ -7,4 +7,9 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   styleUrl: './admin-layout.css',
   templateUrl: './admin-layout.html',
 })
-export class AdminLayout {}
+export class AdminLayout {
+
+userName? = localStorage.getItem("userName");
+
+
+}

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import { AuthService } from '../../services/auth-service';
 
 @Component({
   imports: [RouterLink, RouterOutlet],
@@ -10,6 +11,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 export class AdminLayout {
 
 userName? = localStorage.getItem("userName");
+private authService = inject(AuthService);
+
+
+logout(){
+  return this.authService.logout();
+}
 
 
 }

@@ -7,29 +7,30 @@ import { CategoryList } from '../admin-components/categories/category-list/categ
 import { CategoryCreate } from '../admin-components/categories/category-create/category-create';
 import { CategoryUpdate } from '../admin-components/categories/category-update/category-update';
 import { Login } from '../ui-components/login/login';
+import { authGuard } from '../guards/auth-guard';
 
 export const routes: Routes = [
-
-
   //UI Routes
-{path:'',component:UiLayout,children:[
-  {path:'',component:Home},
-  {path:'menu',component:Menu},
-  {path:'login',component:Login}
-]},
+  {
+    path: '',
+    component: UiLayout,
+    children: [
+      { path: '', component: Home },
+      { path: 'menu', component: Menu },
+      { path: 'login', component: Login },
+    ],
+  },
 
+  //Admin Routes
 
-
-
-
-//Admin Routes
-
-{path:'admin',component:AdminLayout, children:[
-  {path:'categories',component:CategoryList},
-  {path:'categories/create',component:CategoryCreate},
-  {path:'categories/update',component:CategoryUpdate},
-]}
-
-
-
+  {
+    path: 'admin',
+    component: AdminLayout,
+    canActivateChild: [authGuard],
+    children: [
+      { path: 'categories', component: CategoryList },
+      { path: 'categories/create', component: CategoryCreate },
+      { path: 'categories/update', component: CategoryUpdate },
+    ],
+  },
 ];

@@ -51,10 +51,25 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/templates/css/style.min.css",
+              "src/templates/lib/owlcarousel/assets/owl.carousel.min.css",
+              "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "src/templates/lib/easing/easing.min.js",
+              "src/templates/lib/waypoints/waypoints.min.js",
+              "src/templates/lib/owlcarousel/owl.carousel.min.js",
+              "src/templates/lib/tempusdominus/js/moment.min.js",
+              "src/templates/lib/tempusdominus/js/moment-timezone.min.js",
+              "src/templates/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js",
+              "src/templates/mail/jqBootstrapValidation.min.js",
+              "src/templates/mail/contact.js",
+              "src/templates/js/main.js",
+              "node_modules/jquery/dist/jquery.min.js"
+
             ]
           },
           "configurations": {
